@@ -7,7 +7,7 @@ import afterScreenshot from './afterScreenshot';
 import getScreenDimensions from '../scripts/getScreenDimensions';
 import ScreenDimension from '../utils/ScreenDimension';
 
-const log = debug('wdio-screenshot:makeDocumentScreenshot');
+const log = debug('wdio-visual-regression-service');
 
 
 export default async function makeDocumentScreenshot(browser, options = {}) {
