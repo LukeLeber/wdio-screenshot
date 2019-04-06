@@ -1,5 +1,5 @@
 {
-  "name": "@wdio/screenshot-service",
+  "name": "wdio-screenshot-service",
   "version": "1.0.0",
   "description": "Screenshot commands for WebdriverIO",
   "main": "lib/index.js",
