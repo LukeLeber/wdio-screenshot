@@ -27,7 +27,7 @@ async function storeScreenshot(browser, screenDimensions, cropDimensions, base64
 export default async function makeAreaScreenshot(browser, startX, startY, endX, endY) {
   log('requested a screenshot for the following area: %j', {startX, startY, endX, endY});
 
-  const screenDimensions = (await browser.execute(getScreenDimensions)).value;
+  const screenDimensions = (await browser.execute(getScreenDimensions));
   log('detected screenDimensions %j', screenDimensions);
   const screenDimension = new ScreenDimension(screenDimensions, browser);
 
@@ -56,7 +56,7 @@ export default async function makeAreaScreenshot(browser, startX, startY, endX, 
       await browser.pause(100);
 
       log('take screenshot');
-      const base64Screenshot = (await browser.screenshot()).value;
+      const base64Screenshot = (await browser.screenshot());
       const cropDimensions = screenshotStrategy.getCropDimensions();
       const filePath = path.join(dir, `${indexY}-${indexX}.png`);
 
