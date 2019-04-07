@@ -12,7 +12,7 @@ import { cropImage, mergeImages } from '../utils/image';
 import ScreenDimension from '../utils/ScreenDimension';
 import normalizeScreenshot from '../utils/normalizeScreenshot';
 
-const log = debug('wdio-visual-regression-service');
+const log = debug('wdio-screenshot:makeAreaScreenshot');
 const tmpDir = path.join(__dirname, '..', '..', '.tmp');
 
 async function storeScreenshot(browser, screenDimensions, cropDimensions, base64Screenshot, filePath) {
@@ -57,7 +57,6 @@ export default async function makeAreaScreenshot(browser, startX, startY, endX, 
 
       log('take screenshot');
       const base64Screenshot = (await browser.takeScreenshot());
-      log('screenshot taken');
       const cropDimensions = screenshotStrategy.getCropDimensions();
       const filePath = path.join(dir, `${indexY}-${indexX}.png`);
 

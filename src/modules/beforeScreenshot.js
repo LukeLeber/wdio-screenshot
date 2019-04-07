@@ -5,7 +5,7 @@ import scrollbars from '../scripts/scrollbars';
 import modifyElements from '../scripts/modifyElements';
 import triggerResize from '../scripts/triggerResize';
 
-const log = debug('wdio-visual-regression-service');
+const log = debug('wdio-screenshot:beforeScreenshot');
 
 export default async function beforeScreenshot(browser, options) {
   // hide scrollbars
