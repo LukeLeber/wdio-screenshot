@@ -26,10 +26,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/zinserjan/wdio-screenshot"
-  },
-  "bugs": {
-    "url": "https://github.com/zinserjan/wdio-screenshot/issues"
+    "url": "https://github.com/LukeLeber/wdio-screenshot"
   },
   "author": "Jan-André Zinser",
   "license": "MIT",
