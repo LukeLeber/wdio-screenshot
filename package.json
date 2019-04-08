@@ -1,5 +1,5 @@
 {
-  "name": "wdio-screenshot-service",
+  "name": "wdio-screenshot",
   "version": "1.0.0",
   "description": "Screenshot commands for WebdriverIO",
   "main": "lib/index.js",
@@ -60,7 +60,7 @@
     "gh-pages": "^0.11.0",
     "glob": "^7.1.0",
     "http-server": "^0.11.1",
-    "mocha": "^6.0.0",
+    "mocha": "^6.1.1",
     "node-resemble-js": "0.0.5",
     "np": "^2.9.0",
     "rimraf": "^2.5.2",
