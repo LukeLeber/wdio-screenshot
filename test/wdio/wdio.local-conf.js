@@ -1,4 +1,4 @@
-require("babel-register");
+require("@babel/register");
 
 var path = require('path');
 
@@ -22,8 +22,8 @@ exports.config = {
   mochaOpts: {
     ui: 'bdd',
     timeout: 60000,
-    compilers: [
-      'js:babel-register'
+    require: [
+      '@babel/register'
     ],
   },
   before: function () {

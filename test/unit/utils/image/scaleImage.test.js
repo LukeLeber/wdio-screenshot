@@ -19,7 +19,7 @@ async function readAsBase64(file) {
     // read binary data
     const content = await fsExtra.readFile(file);
     // convert binary data to base64 encoded string
-    return new Buffer(content).toString('base64');
+    return Buffer.from(content).toString('base64');
 }
 
 

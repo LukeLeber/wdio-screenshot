@@ -13,7 +13,7 @@ export async function cropImage(base64Screenshot, cropDimensions) {
     throw new Error('Please provide a valid instance of CropDimension!');
   }
 
-  const image = await Jimp.read(new Buffer(base64Screenshot, 'base64'));
+  const image = await Jimp.read(Buffer.from(base64Screenshot, 'base64'));
 
 
   if (cropDimensions.getRotation() !== 0) {
@@ -51,7 +51,7 @@ export async function cropImage(base64Screenshot, cropDimensions) {
  */
 export async function scaleImage(base64Screenshot, scaleFactor) {
 
-  const image = await Jimp.read(new Buffer(base64Screenshot, 'base64'));
+  const image = await Jimp.read(Buffer.from(base64Screenshot, 'base64'));
   image.scale(scaleFactor);
 
   return new Promise((resolve, reject) => {

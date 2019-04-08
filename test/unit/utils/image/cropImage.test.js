@@ -21,19 +21,21 @@ async function readAsBase64(file) {
     // read binary data
     const content = await fsExtra.readFile(file);
     // convert binary data to base64 encoded string
-    return new Buffer(content).toString('base64');
+    return Buffer.from(content).toString('base64');
 }
 
 
 describe('cropImage', function() {
 
-  it('throws error when invalid crop dimensions are provided', async function(done) {
-    try {
-      await cropImage('', {});
-      done('Should throw error');
-    } catch (err) {
-      done();
-    }
+  it('throws error when invalid crop dimensions are provided', function(done) {
+    (async function() {
+      try {
+        await cropImage('', {});
+        done('Should throw error');
+      } catch (err) {
+        done();
+      }
+    })();
   });
 
   it('crops image', async function() {

@@ -20,7 +20,7 @@ export async function cropImage(base64Screenshot, cropDimensions) {
     throw new Error('Please provide a valid instance of CropDimension!');
   }
 
-  const image = gm(new Buffer(base64Screenshot, 'base64'))
+  const image = gm(Buffer.from(base64Screenshot, 'base64'))
 
   if (cropDimensions.getRotation() !== 0) {
     image.rotate('white', cropDimensions.getRotation());
@@ -46,7 +46,7 @@ export async function cropImage(base64Screenshot, cropDimensions) {
  * @returns {string}        screenshot
  */
 export async function scaleImage(base64Screenshot, scaleFactor) {
-  const image = gm(new Buffer(base64Screenshot, 'base64'));
+  const image = gm(Buffer.from(base64Screenshot, 'base64'));
 
   const percent = scaleFactor * 100;
   image.filter('Box'); // to produce equal images as Jimp

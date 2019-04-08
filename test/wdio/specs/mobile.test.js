@@ -32,26 +32,26 @@ describe('integration tests for mobile browsers', function () {
   // it.only('should read dimensions', async function () {
   //   // await browser.url('static.html');
   //   // await browser.pause(3000);
-  //   // const screenDimensions = (await browser.execute(getScreenDimensions)).value;
+  //   // const screenDimensions = (await browser.execute(getScreenDimensions));
   //   //
   //   // console.log('static');
   //   // console.log(JSON.stringify(screenDimensions));
   //   //
   //   // await browser.url('responsive.html');
   //   // await browser.pause(3000);
-  //   // const screenDimensions2 = (await browser.execute(getScreenDimensions)).value;
+  //   // const screenDimensions2 = (await browser.execute(getScreenDimensions));
   //   // console.log('responsive');
   //   // console.log(JSON.stringify(screenDimensions2));
   //
   //   // await browser.url('responsive-min-width.html');
   //   // await browser.pause(3000);
-  //   // const screenDimensions3 = (await browser.execute(getScreenDimensions)).value;
+  //   // const screenDimensions3 = (await browser.execute(getScreenDimensions));
   //   // console.log('responsive-min-width');
   //   // console.log(JSON.stringify(screenDimensions3));
   //   //
   //   // await browser.url('responsive-min-width-small-height.html');
   //   // await browser.pause(3000);
-  //   // const screenDimensions4 = (await browser.execute(getScreenDimensions)).value;
+  //   // const screenDimensions4 = (await browser.execute(getScreenDimensions));
   //   // console.log('responsive-min-width-small-height');
   //   // console.log(JSON.stringify(screenDimensions4));
   //   //
@@ -60,13 +60,13 @@ describe('integration tests for mobile browsers', function () {
   //   await browser.pause(3000);
   //
   //   // rotate device to hide navigation bars :)
-  //   const orientation = (await browser.orientation()).value;
+  //   const orientation = (await browser.orientation());
   //   await browser.orientation(orientation.toLowerCase() === 'landscape' ? 'portrait' : 'landscape');
   //   await browser.pause(1000);
   //   await browser.orientation(orientation);
   //   await browser.pause(1000);
   //
-  //   console.log(JSON.stringify((await browser.execute(getScreenDimensions)).value));
+  //   console.log(JSON.stringify((await browser.execute(getScreenDimensions))));
   // });
 
   context('static sites - static.html (throws unsupported)', function () {

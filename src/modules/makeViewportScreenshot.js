@@ -17,13 +17,13 @@ export default async function makeViewportScreenshot(browser, options = {}) {
   log('start viewport screenshot');
 
   // get current scroll position
-  const [startX, startY] = (await browser.execute(getScrollPosition)).value;
+  const [startX, startY] = (await browser.execute(getScrollPosition));
 
   // hide scrollbars, scroll to start, hide & remove elements, wait for render
   await beforeScreenshot(browser, options);
 
   // get screen dimisions to determine viewport height & width
-  const screenDimensions = (await browser.execute(getScreenDimensions)).value;
+  const screenDimensions = (await browser.execute(getScreenDimensions));
   const screenDimension = new ScreenDimension(screenDimensions, browser);
 
   // make screenshot of area

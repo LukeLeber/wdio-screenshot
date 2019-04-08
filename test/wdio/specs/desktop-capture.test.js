@@ -17,9 +17,9 @@ function getSpecificFile(page, type, file) {
 }
 
 async function takeIt(page, type) {
-  const base64Screenshot = (await browser.screenshot()).value;
+  const base64Screenshot = (await browser.screenshot());
   await saveBase64Image(getSpecificFile(page, type, 'screenshot.png'), base64Screenshot);
-  const screenDimensions = (await browser.execute(getScreenDimensions)).value;
+  const screenDimensions = (await browser.execute(getScreenDimensions));
   await fsExtra.outputFile(getSpecificFile(page, type, 'dimensions.json'), JSON.stringify(screenDimensions, null, 2));
 }
 
@@ -35,7 +35,7 @@ describe('capture screenshots & dimensions for unit tests', function () {
   });
 
   it('default', async function () {
-    // const orientation = (await browser.orientation()).value.toLowerCase();
+    // const orientation = (await browser.orientation()).toLowerCase();
     await takeIt(this.page, `default`);
   });
 
