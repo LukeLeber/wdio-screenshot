@@ -18,13 +18,13 @@ export default async function beforeScreenshot(browser, options) {
   // hide elements
   if (Array.isArray(options.hide) && options.hide.length) {
     log('hide the following elements: %s', options.hide.join(', '));
-    await browser.selectorExecute(options.hide, modifyElements, 'opacity', '0');
+    await browser.execute(options.hide, modifyElements, 'opacity', '0');
   }
 
   // remove elements
   if (Array.isArray(options.remove) && options.remove.length) {
     log('remove the following elements: %s', options.remove.join(', '));
-    await browser.selectorExecute(options.remove, modifyElements, 'display', 'none');
+    await browser.execute(options.remove, modifyElements, 'display', 'none');
   }
 
   // scroll back to start
