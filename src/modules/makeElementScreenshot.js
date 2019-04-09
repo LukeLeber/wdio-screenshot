@@ -16,6 +16,10 @@ export default async function makeElementScreenshot(browser, elementSelector, op
   // hide scrollbars, scroll to start, hide & remove elements, wait for render
   await beforeScreenshot(browser, options);
   log('1');
+
+  let elem = $(elementSelector);
+  log(elementSelector);
+  log(elem);
   // get bounding rect of elements
   const boundingRects = await browser.execute(getBoundingRect, $(elementSelector).value);
   log('2');
