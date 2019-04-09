@@ -5,7 +5,7 @@ import beforeScreenshot from './beforeScreenshot';
 import afterScreenshot from './afterScreenshot';
 
 import groupBoundingRect from '../utils/groupBoundingRect';
-import getBoundingRects from '../scripts/getBoundingRects';
+import getBoundingRect from '../scripts/getBoundingRects';
 
 const log = debug('wdio-screenshot:makeElementScreenshot');
 
